@@ -2,6 +2,7 @@ FROM golang
 
 ARG REPO='github.com/drone/drone'
 ARG VERSION
+ENV DRONE_DATABASE_DATASOURCE=/data/database.sqlite
 
 RUN git clone "https://${REPO}" drone/
 WORKDIR drone/
