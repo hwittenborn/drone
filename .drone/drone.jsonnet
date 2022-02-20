@@ -18,7 +18,7 @@ local buildAndPublish() = {
         commands: [
             "docker login -u api -p \"$${proget_api_key}\" \"proget.$${hw_url}\"",
             "docker build --build-arg \"VERSION=$${VERSION}\" ./ -t \"proget.$${hw_url}/docker/hwittenborn/drone:$${VERSION}\"",
-            "docker push \"proget.$${hw_url}/docker/hwittenborn/drone\""
+            "docker push \"proget.$${hw_url}/docker/hwittenborn/drone:$${VERSION}\""
         ]
     }]
 };
