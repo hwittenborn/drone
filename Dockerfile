@@ -8,6 +8,6 @@ RUN git clone "https://${REPO}" drone/
 WORKDIR drone/
 RUN git checkout "v${VERSION}"
 
-RUN go build -tags "nolimit" -ldflags '-extldflags "-static"' -o /usr/local/bin/drone-server "${REPO}/cmd/drone-server"
+RUN go build -tags "nolimit" -o /usr/local/bin/drone-server "${REPO}/cmd/drone-server"
 
 ENTRYPOINT ["/usr/local/bin/drone-server"]
