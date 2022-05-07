@@ -13,7 +13,7 @@ local buildAndPublish() = {
         volumes: [{name: "docker", path: "/var/run/docker.sock"}],
         environment: {
             proget_api_key: {from_secret: "proget_api_key"},
-            VERSION: "2.9.1"
+            VERSION: "2.11.1"
         },
         commands: [
             "docker login -u api -p \"$${proget_api_key}\" \"proget.$${hw_url}\"",
