@@ -2,6 +2,8 @@ FROM golang
 
 ARG REPO='github.com/drone/drone'
 ARG VERSION
+EXPOSE 80
+VOLUME /data
 
 # These environment variables are copied from the upstream Dockerfiles in https://github.com/harness/drone.
 ENV GODEBUG netdns=go
